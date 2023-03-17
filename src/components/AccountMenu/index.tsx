@@ -1,5 +1,6 @@
-import { Logout } from "@mui/icons-material";
+import { Logout, AccountCircle } from "@mui/icons-material";
 import { Menu, MenuItem, ListItemIcon } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 interface AccountMenuProps {
   anchorEl: HTMLElement;
@@ -50,6 +51,13 @@ const AccountMenu = ({
       transformOrigin={{ horizontal: "right", vertical: "top" }}
       anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
     >
+      <MenuItem component={RouterLink} to="/my-account">
+        <ListItemIcon>
+          <AccountCircle fontSize="small" />
+        </ListItemIcon>
+        Mi Cuenta
+      </MenuItem>
+
       <MenuItem onClick={logout}>
         <ListItemIcon>
           <Logout fontSize="small" />

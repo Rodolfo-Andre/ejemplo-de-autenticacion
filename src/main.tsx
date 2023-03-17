@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import {
+  UserProfilePage,
   MainPage,
   OnlyAuthenticatedPage,
   SignInPage,
@@ -48,6 +49,15 @@ const router = createBrowserRouter([
             element: <OnlyAuthenticatedPage />,
           },
         ],
+      },
+    ],
+  },
+  {
+    element: <ForAuthenticated />,
+    children: [
+      {
+        path: "/my-account",
+        element: <UserProfilePage />,
       },
     ],
   },

@@ -66,13 +66,14 @@ const useSign = <T extends ISignUp | ISignIn>(
   };
 
   const signUp = async (user: ISignUp) => {
-    const { email, password, ...rest } = user;
+    const { email, password, firstName, lastName } = user;
     const { data, error } = await SupabaseService.auth.signUp({
       email,
       password,
       options: {
         data: {
-          ...rest,
+          email,
+          full_name: firstName + " " + lastName,
         },
         captchaToken,
       },

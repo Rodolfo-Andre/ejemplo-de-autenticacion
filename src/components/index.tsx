@@ -11,3 +11,4 @@ export { default as SignUpForm } from "./SignUpForm";
 export { default as SocialLoginButton } from "./SocialLoginButton";
 export { default as SocialProviderButtons } from "./SocialProviderButtons";
 export { default as TabNavigator } from "./TabNavigator";
+export { default as UserProfile } from "./UserProfile";
